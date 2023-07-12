@@ -36,7 +36,6 @@ var render = data.map(function(value,key){
 container.innerHTML = render;
 //////////////////////
 var listitem = document.getElementsByClassName('item');
-console.log(listitem);
 for(let i=0; i<listitem.length; i++) {
     listitem[i].addEventListener('click',function(){
         window.open(data[i].links, '_blank');
