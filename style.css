@@ -6,8 +6,8 @@ img{
     object-fit: cover;
     width: 290px;
     height: 290px;
+    transition: 1s ease-in-out;
     border-radius: 50px;
-    transition: 0.2s ease-in-out;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .header{
@@ -27,31 +27,57 @@ img{
 }
 .header ul .item{
     width: fit-content;
+    height: 290px;
     text-align: center;
-    background-color: #11ffee00;
     position: relative;
     cursor: pointer;
+    border-radius: 50px;
+    background-color: white;
+    transition: 0.3 ease-in-out;
+    margin-bottom: 60px;
 }
 .header ul .item h5{
     font-size: 48px;
     font-weight: 800;
     color: #FF8989;
     position: absolute;
-    top: 50%;
+    top: 150px;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.2s ease-in-out;
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.176));
 }
-.header ul .item:hover h5{
-    top: 60%;
+.header ul .item:hover{
+    transform: scale(1.05);
 }
-.header ul .item:hover img{
-    transform: scale(1.1);
+.header ul .item:hover h5{
+    top: 100px;
 }
 .panner{
     font-size: 64px;
     font-weight: 800;
     display: block;
     text-align: center;
+}
+.header ul .item .option{
+    display: flex;
+    justify-content: center;
+    align-items:end;
+    padding-bottom: 20px;
+    text-align: end;
+    position: absolute;
+    background: white;
+    width: 290px;
+    height: 100px;
+    font-size: 24px;
+    top: 160px;
+    z-index: -1;
+    border-radius: 0 0 50px 50px;
+    transition: 0.3s ease-in-out;
+}
+.header ul .item:hover .option{
+    top: 230px;
+}
+.header ul .item .option:hover{
+    background-color: #FF8989;
 }

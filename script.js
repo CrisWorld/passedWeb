@@ -3,7 +3,8 @@ var data = [
         id: 1,
         name: 'MAE101',
         links: 'https://drive.google.com/drive/folders/15csFjyHrJuujtb7yWRMEITKHKmZ_wp15?usp=sharing',
-        image: 'img/MAE.png'
+        image: 'img/MAE.png',
+        review_link: 'https://elearning.tcu.edu.vn/1151/'
     },
     {
         id: 2,
@@ -30,6 +31,7 @@ var render = data.map(function(value,key){
     <li class="item">
         <img src="${value.image}" alt="${value.name}">
         <h5>${value.name}</h5>
+        <div class="option">Ôn tập</div>
     </li>
     `
 }).join(' ');
@@ -39,5 +41,11 @@ var listitem = document.getElementsByClassName('item');
 for(let i=0; i<listitem.length; i++) {
     listitem[i].addEventListener('click',function(){
         window.open(data[i].links, '_blank');
+    })
+};
+var listoption = document.getElementsByClassName('option');
+for(let i=0; i<listoption.length; i++) {
+    listoption[i].addEventListener('click',function(){
+        window.open(data[i].review_link, '_blank');
     })
 };
