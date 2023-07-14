@@ -2,6 +2,11 @@
 html{
     font-family: 'Roboto Condensed', sans-serif;
 }
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 img{
     object-fit: cover;
     width: 290px;
@@ -12,7 +17,7 @@ img{
 }
 .header{
     display: block;
-    margin: auto !important;
+    margin-top: 100px;
 }
 .header ul{
     padding: 0;
@@ -58,6 +63,37 @@ img{
     font-weight: 800;
     display: block;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.meme{
+    position: absolute;
+    display: flex;
+    height: fit-content;
+    overflow: hidden;
+    width: 100px;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    border-radius: 50px;
+    transition: 0.3s linear;
+    box-shadow: rgba(216, 216, 222, 0.713) 0px 7px 29px 0px;
+}
+.meme img{
+    object-fit: cover;
+    height: 100px !important;
+    width: 100px !important;
+    border-radius: 50%;
+}
+.meme span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 140px;
+    width: 140px !important;
 }
 .header ul .item .option{
     display: flex;
@@ -80,4 +116,7 @@ img{
 }
 .header ul .item .option:hover{
     background-color: #FF8989;
+}
+.meme:hover{
+    width: 290px;
 }
