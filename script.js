@@ -59,3 +59,21 @@ for(let i=0; i<listoption.length; i++) {
         window.open(data[i].review_link, '_blank');
     })
 };
+window.addEventListener('online', function(){
+    document.querySelector('.status').innerHTML = `<div class="alert online" style="position: absolute; bottom: 0; right: 10px; filter: opacity(100%);">
+    Bạn đang kết nối internet!
+    <button type="button" class="btn-close" onclick="closeAlert()">X</button>
+</div>`;
+});
+window.addEventListener('offline', function(){
+    document.querySelector('.status').innerHTML = `<div class="alert offline" style="position: absolute; bottom: 0; right: 10px; filter: opacity(100%);">
+    Bạn đang không kết nối internet!
+    <button type="button" class="btn-close" onclick="closeAlert()">X</button>
+</div>`;
+});
+function closeAlert(){
+    setTimeout(()=>{
+        document.querySelector('.status').innerHTML = '';
+    },2000)
+    document.querySelector('.alert').style.filter = 'opacity(0%)';
+};
